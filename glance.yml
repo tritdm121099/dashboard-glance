@@ -1,0 +1,57 @@
+pages:
+  - name: Home
+    theme:
+      background-color: 229 19 23
+      contrast-multiplier: 1.2
+      primary-color: 222 74 74
+      positive-color: 96 44 68
+      negative-color: 359 68 71
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+
+          - type: weather
+            hour-format: 24h
+            location: Huế
+
+          - type: rss
+            limit: 10
+            collapse-after: 3
+            cache: 3h
+            feeds:
+              - url: https://ciechanow.ski/atom.xml
+              - url: https://www.joshwcomeau.com/rss.xml
+                title: Josh Comeau
+              - url: https://samwho.dev/rss.xml
+              - url: https://awesomekling.github.io/feed.xml
+              - url: https://ishadeed.com/feed.xml
+                title: Ahmad Shadeed
+
+          - type: twitch-channels
+            channels:
+              - theprimeagen
+              - cohhcarnage
+              - christitustech
+              - blurbs
+              - asmongold
+              - jembawls
+
+      - size: full
+        widgets:
+          - type: hacker-news
+            style: vertical-list
+            show-thumbnails: yes
+
+          - type: videos
+            style: grid-cards
+            channels:
+              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+              - UCv6J_jJa8GJqFwQNgNrMuww # ServeTheHome
+              - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
+              - UCFbNIlppjAuEX4znoulh0Cw # Web Dev Simplified
+
+          - type: reddit
+            subreddit: selfhosted
+            style: vertical-list
+            show-thumbnails: yes
