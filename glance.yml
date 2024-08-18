@@ -9,24 +9,17 @@ pages:
     columns:
       - size: small
         widgets:
+          - type: clock
+            hour-format: 24h
+            timezones:
+              - timezone: Asia/Bangkok
+                label: Việt Nam
+
           - type: calendar
 
           - type: weather
             hour-format: 24h
             location: Huế
-
-          - type: rss
-            limit: 10
-            collapse-after: 3
-            cache: 3h
-            feeds:
-              - url: https://ciechanow.ski/atom.xml
-              - url: https://www.joshwcomeau.com/rss.xml
-                title: Josh Comeau
-              - url: https://samwho.dev/rss.xml
-              - url: https://awesomekling.github.io/feed.xml
-              - url: https://ishadeed.com/feed.xml
-                title: Ahmad Shadeed
 
           - type: twitch-channels
             channels:
@@ -39,19 +32,90 @@ pages:
 
       - size: full
         widgets:
+          - type: search
+            search-engine: duckduckgo
+            bangs:
+              - title: YouTube
+                shortcut: "!yt"
+                url: https://www.youtube.com/results?search_query={QUERY}
+          
+          - type: bookmarks
+            style: dynamic-columns-experimental
+            groups:
+              - links:
+                  - title: Gmail
+                    url: https://mail.google.com/mail/u/0/
+                  - title: Amazon
+                    url: https://www.amazon.com/
+                  - title: Github
+                    url: https://github.com/
+                  - title: Wikipedia
+                    url: https://en.wikipedia.org/
+              - title: Entertainment
+                color: 10 70 50
+                links:
+                  - title: Netflix
+                    url: https://www.netflix.com/
+                  - title: Disney+
+                    url: https://www.disneyplus.com/
+                  - title: YouTube
+                    url: https://www.youtube.com/
+                  - title: Prime Video
+                    url: https://www.primevideo.com/
+              - title: Social
+                color: 200 50 50
+                links:
+                  - title: Reddit
+                    url: https://www.reddit.com/
+                  - title: Twitter
+                    url: https://twitter.com/
+                  - title: Instagram
+                    url: https://www.instagram.com/
+
           - type: hacker-news
             style: vertical-list
-            show-thumbnails: yes
 
+          - type: rss
+            limit: 10
+            collapse-after: 3
+            cache: 3h
+            style: detailed-list
+            feeds:
+              - url: https://ciechanow.ski/atom.xml
+              - url: https://www.joshwcomeau.com/rss.xml
+                title: Josh Comeau
+              - url: https://samwho.dev/rss.xml
+              - url: https://awesomekling.github.io/feed.xml
+              - url: https://ishadeed.com/feed.xml
+                title: Ahmad Shadeed
+
+
+  - name: Video
+    columns:
+      - size: full
+        widgets:
           - type: videos
+            limit: 200
             style: grid-cards
             channels:
               - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
               - UCv6J_jJa8GJqFwQNgNrMuww # ServeTheHome
               - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
               - UCFbNIlppjAuEX4znoulh0Cw # Web Dev Simplified
+              - UCgdTVe88YVSrOZ9qKumhULQ # Hardware Haven
+              - UCSj1Igu3ejxqcQISNEmx8VQ # Decoded Frontend
+              - UCbVZdLngJH6KOJvpAOO3qTw # Joshua Morony
 
+  - name: Reddit
+    columns:
+      - size: full
+        widgets:
           - type: reddit
             subreddit: selfhosted
-            style: vertical-list
+            style: horizontal-cards
+            show-thumbnails: yes
+            
+          - type: reddit
+            subreddit: technology
+            style: horizontal-cards
             show-thumbnails: yes
