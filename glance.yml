@@ -106,6 +106,12 @@ pages:
     columns:
       - size: full
         widgets:
+          - type: reddit
+            subreddit: selfhosted
+            style: horizontal-cards
+            show-thumbnails: yes
+ 
+        widgets:
           - type: videos
             limit: 50
             style: grid-cards
@@ -115,11 +121,3 @@ pages:
               - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
               - UCgdTVe88YVSrOZ9qKumhULQ # Hardware Haven
 
-    columns:
-      - size: full
-        widgets:
-          - type: reddit
-            subreddit: selfhosted
-            style: horizontal-cards
-            show-thumbnails: yes
-  
