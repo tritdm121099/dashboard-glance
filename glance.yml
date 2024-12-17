@@ -98,15 +98,23 @@ pages:
             limit: 200
             style: grid-cards
             channels:
-              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
-              - UCv6J_jJa8GJqFwQNgNrMuww # ServeTheHome
-              - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
               - UCFbNIlppjAuEX4znoulh0Cw # Web Dev Simplified
-              - UCgdTVe88YVSrOZ9qKumhULQ # Hardware Haven
               - UCSj1Igu3ejxqcQISNEmx8VQ # Decoded Frontend
               - UCbVZdLngJH6KOJvpAOO3qTw # Joshua Morony
+        
+  - name: Homelab
+    columns:
+      - size: full
+        widgets:
+          - type: videos
+            limit: 50
+            style: grid-cards
+            channels:
+              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling              
+              - UCv6J_jJa8GJqFwQNgNrMuww # ServeTheHome
+              - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
+              - UCgdTVe88YVSrOZ9qKumhULQ # Hardware Haven
 
-  - name: Reddit
     columns:
       - size: full
         widgets:
@@ -114,8 +122,4 @@ pages:
             subreddit: selfhosted
             style: horizontal-cards
             show-thumbnails: yes
-            
-          - type: reddit
-            subreddit: technology
-            style: horizontal-cards
-            show-thumbnails: yes
+  
